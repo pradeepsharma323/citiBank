@@ -6,4 +6,5 @@ import com.bank.citi.model.User;
 
 public interface UserRepository extends CrudRepository<User, Integer>{
 
+	
 }

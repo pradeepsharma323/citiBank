@@ -6,4 +6,4 @@ CREATE TABLE USER (
   last_name VARCHAR(250) NOT NULL,
   gender VARCHAR(250), 
   age VARCHAR(250) 
-);
+); 

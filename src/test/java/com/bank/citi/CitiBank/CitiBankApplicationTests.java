@@ -48,6 +48,7 @@ public class CitiBankApplicationTests {
 		Assert.notNull(user);
 	}
 
+	
 	@Test
 	public void testCreateUser() {
 		User user = new User();

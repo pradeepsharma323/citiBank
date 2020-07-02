@@ -12,6 +12,7 @@ public class UserService {
 	@Autowired
 	private UserRepository userRepository;
 	
+	
 	public User getDetailByID(int id) {
 		return userRepository.findById(id).get();
 	}

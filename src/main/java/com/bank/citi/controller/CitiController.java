@@ -22,6 +22,7 @@ public class CitiController {
 		return "Hello Spring Boot";
 	}
 	
+	
 	  @RequestMapping("/user/{userId}") 
 	  public User getUser(@PathVariable("userId") int userId) 
 	  { 

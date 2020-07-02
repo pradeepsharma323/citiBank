@@ -9,4 +9,5 @@ public class CitiBankApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(CitiBankApplication.class, args);
 	}
+
 }

@@ -32,15 +32,7 @@ public class CitiBankApplicationTests {
 	public void contextLoads() {
 	}
 
-	@Test
-	public void testGetAllUsers() {
-		HttpHeaders headers = new HttpHeaders();
-		HttpEntity<String> entity = new HttpEntity<String>(null, headers);
-		ResponseEntity<String> response = restTemplate.exchange(getRootUrl() + "/users", HttpMethod.GET, entity,
-				String.class);
-		Assert.notNull(response.getBody());
-	}
-
+	
 	@Test
 	public void testGetUserById() {
 		User user = restTemplate.getForObject(getRootUrl() + "/users/101", User.class);
@@ -61,16 +53,5 @@ public class CitiBankApplicationTests {
 		Assert.notNull(postResponse.getBody());
 	}
 
-	@Test
-	public void testUpdatePost() {
-		int id = 1;
-		User user = restTemplate.getForObject(getRootUrl() + "/users/" + id, User.class);
-		user.setFirstName("admin1");
-		user.setLastName("admin2");
-		restTemplate.put(getRootUrl() + "/users/" + id, user);
-		User updatedUser = restTemplate.getForObject(getRootUrl() + "/users/" + id, User.class);
-		Assert.notNull(updatedUser);
-	}
 
-	
 }
